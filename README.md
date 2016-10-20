@@ -105,7 +105,6 @@ I have bad solution: to save the image after crop and resize and re-open it. In 
             <td><?php var_dump($background_image_1->getImageResolution()); ?></td>
             <td><?php var_dump($background_image_2->getImageResolution()); ?></td>
             <td><?php var_dump($background_image_3->getImageResolution()); ?></td>
-            <td rowspan="3"><?php var_dump(Imagick::getVersion()); ?></td>
         </tr>
         <tr>
             <td><?php echo "{$background_image_1->getImageWidth()}x{$background_image_1->getImageHeight()}"; ?></td>
@@ -116,6 +115,9 @@ I have bad solution: to save the image after crop and resize and re-open it. In 
             <td><img src="/test/test_imagick_1.jpg" /></td>
             <td><img src="/test/test_imagick_2.jpg" /></td>
             <td><img src="/test/test_imagick_3.jpg" /></td>
+        </tr>
+        <tr>
+            <td colspan="3"><?php var_dump(Imagick::getVersion()); ?></td>
         </tr>
     </table>
     
