@@ -1,7 +1,7 @@
 # imagick bug
 
 I have some bug (or feature). I want to put multiline text on the center of image.
-*Я заметил странный баг (или фичу). Я хочу наложить многострочный текст в центр картинки
+*Я заметил странный баг (или фичу). Я хочу наложить многострочный текст в центр картинки*
 
     $my_text_lines = ['sssssssss', 'ddddddddd', 'bbbbbbbbbb'];
     $background_image = new Imagick(dirname(__FILE__).'/test/img.jpg');
@@ -10,7 +10,7 @@ I have some bug (or feature). I want to put multiline text on the center of imag
     $background_image_2 = $background_image->clone();
 
 It's function for putting text-blocks in two ways for text and putting green lines for check the correct y-position.
-*Это функция, которая двумя способами накладывает текстовые блоки и зеленые линии для проверки правильности y-кординат
+*Это функция, которая двумя способами накладывает текстовые блоки и зеленые линии для проверки правильности y-кординат*
 
     function put_text(Imagick $image, $text_lines) {
 
@@ -58,13 +58,13 @@ It's function for putting text-blocks in two ways for text and putting green lin
     }
     
 On original image everything is fine.
-*С оригинальной кортинкой все хорошо
+*С оригинальной кортинкой все хорошо*
 
     $background_image_1 = put_text($background_image_1, $my_text_lines);
     $background_image_1->writeImage(dirname(__FILE__).'/test/test_imagick_1.jpg');
     
 In next case I try to crop image and resize it to original size
-*В другом варианте я пробую обрезать изображение и изменить его размер до оригинального
+*В другом варианте я пробую обрезать изображение и изменить его размер до оригинального*
 
     $background_image_2->cropImage(
         $background_image->getImageWidth()/2,
@@ -80,19 +80,19 @@ In next case I try to crop image and resize it to original size
     $background_image_3 = $background_image_2->clone();
         
 And put text and save it to other file;
-*...наложить текст и сохранить его в другом файле
+*...наложить текст и сохранить его в другом файле*
 
     $background_image_2 = put_text($background_image_2, $my_text_lines);
     $background_image_2->writeImage(dirname(__FILE__).'/test/test_imagick_2.jpg');
 
 The position of text lines is incorrect (see image below). Why? How put text on correct position?
-*Положение строк текста оказывается неправильным (см. картинку ниже). Почему так происходит? Как наложить текст корректно?
+*Положение строк текста оказывается неправильным (см. картинку ниже). Почему так происходит? Как наложить текст корректно?*
 
 I checked image sizes and resolutions.
-*Я проверил и размеры картинки, и разрешение
+*Я проверил и размеры картинки, и разрешение*
 
 I have bad solution: to save the image after crop and resize and re-open it. In this case all fine but it's a very bad solution.
-*Есть одно костыльное решение: сохранить картинку после обрезки и изменения размера, а затем переоткрыть ее. В этом случае все работает правильно, но это очень плохое решение.
+*Есть одно костыльное решение: сохранить картинку после обрезки и изменения размера, а затем переоткрыть ее. В этом случае все работает правильно, но это очень плохое решение.*
 
     $background_image_3->writeImage(dirname(__FILE__).'/test/tmp.jpg');
     $background_image_3->destroy();
