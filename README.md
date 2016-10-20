@@ -58,7 +58,7 @@ It's function for putting text-blocks in two ways for text and putting green lin
     }
     
 On original image everything is fine.<br/>
-*С оригинальной кортинкой все хорошо*
+*С оригинальной картинкой все хорошо*
 
     $background_image_1 = put_text($background_image_1, $my_text_lines);
     $background_image_1->writeImage(dirname(__FILE__).'/test/test_imagick_1.jpg');
