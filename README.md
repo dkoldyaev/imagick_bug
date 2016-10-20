@@ -121,4 +121,4 @@ I have bad solution: to save the image after crop and resize and re-open it. In 
         </tr>
     </table>
     
-<img src="https://i.stack.imgur.com/E0Zop.png" />
+<img src="https://github.com/dkoldyaev/imagick_bug/raw/master/test/screencapture-a-ura-ru-local-test_imagick-php-1476948413695.jpg" />
